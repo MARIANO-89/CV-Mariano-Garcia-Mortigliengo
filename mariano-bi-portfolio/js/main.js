@@ -350,10 +350,10 @@ class PortfolioApp {
                     <div class="color-frequency">${color.frequency}%</div>
                 </div>
             `;
-            
+
+            // Click normal: copiar al portapapeles
             colorSwatch.addEventListener('click', () => {
                 navigator.clipboard.writeText(color.hex.toUpperCase()).then(() => {
-                    // Enhanced toast notification
                     const toast = document.createElement('div');
                     toast.textContent = `${color.hex.toUpperCase()} ${this.currentLanguage === 'es' ? 'copiado!' : 'copied!'}`;
                     toast.style.cssText = `
@@ -370,13 +370,20 @@ class PortfolioApp {
                         animation: slideInRight 0.3s ease;
                     `;
                     document.body.appendChild(toast);
-                    
-                    setTimeout(() => {
-                        toast.remove();
-                    }, 2000);
+                    setTimeout(() => { toast.remove(); }, 2000);
                 });
             });
-            
+
+            // Doble click: asignar como color primario (puedes cambiar a secundario/acento si quieres)
+            colorSwatch.addEventListener('dblclick', () => {
+                const input = document.getElementById('primary-color');
+                const inputPicker = document.getElementById('primary-color-picker');
+                if (input) input.value = color.hex.toUpperCase();
+                if (inputPicker) inputPicker.value = color.hex.toUpperCase();
+                this.colors.primary = color.hex.toUpperCase();
+                this.drawBackground();
+            });
+
             colorsGrid.appendChild(colorSwatch);
         });
         
@@ -489,101 +496,117 @@ class PortfolioApp {
         });
 
         // Color controls (hexadecimal y selector visual, en columna)
-        const colorInputs = ['primary-color', 'secondary-color', 'accent-color'];
-        colorInputs.forEach(id => {
-            let inputText = document.getElementById(id);
-            let inputColor = document.getElementById(id + '-picker');
+        const colorInputs = [
+            { id: 'primary-color', labelEs: 'Color Primario', labelEn: 'Primary Color' },
+            { id: 'secondary-color', labelEs: 'Color Secundario', labelEn: 'Secondary Color' },
+            { id: 'accent-color', labelEs: 'Color de Acento', labelEn: 'Accent Color' }
+        ];
 
-            // Si no existen, los creamos
-            if (!inputText || !inputColor) {
-                const panel = document.querySelector('.color-controls');
-                if (panel) {
-                    // Label principal (Color Primario, etc.)
-                    const mainLabel = document.createElement('label');
-                    mainLabel.setAttribute('for', id);
-                    mainLabel.textContent = id === 'primary-color'
-                        ? (this.currentLanguage === 'es' ? '' : '')
-                        : id === 'secondary-color'
-                            ? (this.currentLanguage === 'es' ? '' : '')
-                            : (this.currentLanguage === 'es' ? '' : '');
-                    mainLabel.style.display = 'block';
-                    mainLabel.style.fontWeight = 'bold';
-                    mainLabel.style.marginBottom = '2px';
+        const panel = document.querySelector('.color-controls');
+        if (panel) panel.innerHTML = ''; // Limpia para evitar duplicados
 
-                    // Sub-label para HEX
-                    const subLabel = document.createElement('span');
-                    subLabel.textContent = id.replace('-color', '').replace(/^./, c => c.toUpperCase()) + ' (#HEX)';
-                    subLabel.style.display = 'block';
-                    subLabel.style.fontSize = '0.95em';
-                    subLabel.style.color = '#666';
-                    subLabel.style.marginBottom = '4px';
+        colorInputs.forEach(({ id, labelEs, labelEn }) => {
+            const colorName = id.replace('-color', '');
+            const colorValue = this.colors[colorName];
 
-                    // Input de texto para hex
-                    inputText = document.createElement('input');
-                    inputText.type = 'text';
-                    inputText.id = id;
-                    inputText.value = this.colors[id.replace('-color', '')];
-                    inputText.maxLength = 7;
-                    inputText.pattern = "^#([A-Fa-f0-9]{6})$";
-                    inputText.style.width = "90px";
-                    inputText.style.marginRight = "8px";
-                    inputText.placeholder = "#005A9F";
-                    inputText.style.display = 'inline-block';
+            // Label principal
+            const mainLabel = document.createElement('label');
+            mainLabel.setAttribute('for', id);
+            mainLabel.textContent = this.currentLanguage === 'es' ? labelEs : labelEn;
+            mainLabel.style.display = 'block';
+            mainLabel.style.fontWeight = 'bold';
+            mainLabel.style.marginBottom = '2px';
 
-                    // Input de color visual
-                    inputColor = document.createElement('input');
-                    inputColor.type = 'color';
-                    inputColor.id = id + '-picker';
-                    inputColor.value = this.colors[id.replace('-color', '')];
-                    inputColor.style.width = "38px";
-                    inputColor.style.height = "38px";
-                    inputColor.style.verticalAlign = "middle";
-                    inputColor.style.marginLeft = "8px";
-                    inputColor.style.display = 'inline-block';
+            // Contenedor visual del color + input
+            const colorBox = document.createElement('div');
+            colorBox.style.display = 'flex';
+            colorBox.style.alignItems = 'center';
+            colorBox.style.background = '#fff';
+            colorBox.style.border = '2px solid #e0e0e0';
+            colorBox.style.borderRadius = '10px';
+            colorBox.style.padding = '6px 10px';
+            colorBox.style.marginBottom = '8px';
+            colorBox.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)';
 
-                    // Wrapper
-                    const wrapper = document.createElement('div');
-                    wrapper.className = 'color-control';
-                    wrapper.style.marginBottom = '16px';
+            // Cuadro de color visual
+            const colorPreview = document.createElement('div');
+            colorPreview.style.width = '32px';
+            colorPreview.style.height = '32px';
+            colorPreview.style.borderRadius = '8px';
+            colorPreview.style.marginRight = '12px';
+            colorPreview.style.border = '1.5px solid #ccc';
+            colorPreview.style.background = colorValue;
+            colorPreview.style.cursor = 'pointer';
 
-                    wrapper.appendChild(mainLabel);
-                    wrapper.appendChild(subLabel);
+            // Input de texto para hex
+            const inputText = document.createElement('input');
+            inputText.type = 'text';
+            inputText.id = id;
+            inputText.value = colorValue;
+            inputText.maxLength = 7;
+            inputText.pattern = "^#([A-Fa-f0-9]{6})$";
+            inputText.placeholder = "#005A9F";
+            inputText.style.width = "90px";
+            inputText.style.borderRadius = "6px";
+            inputText.style.border = "1.5px solid #ccc";
+            inputText.style.padding = "6px 10px";
+            inputText.style.fontSize = "1em";
+            inputText.style.background = "#f9f9f9";
+            inputText.style.outline = "none";
+            inputText.style.transition = "border-color 0.2s";
+            inputText.style.boxSizing = "border-box";
 
-                    // Contenedor para inputs en fila
-                    const inputRow = document.createElement('div');
-                    inputRow.style.display = 'flex';
-                    inputRow.style.alignItems = 'center';
-                    inputRow.appendChild(inputText);
-                    inputRow.appendChild(inputColor);
-
-                    wrapper.appendChild(inputRow);
-                    panel.appendChild(wrapper);
-                }
-            }
-
-            // Sincronización: hex -> color
-            if (inputText && inputColor) {
-                inputText.addEventListener('input', (e) => {
-                    let val = e.target.value.trim();
-                    if (/^#[A-Fa-f0-9]{6}$/.test(val)) {
-                        inputText.style.borderColor = '';
-                        inputColor.value = val;
-                        const colorName = id.replace('-color', '');
-                        this.colors[colorName] = val;
-                        this.drawBackground();
-                    } else {
-                        inputText.style.borderColor = 'red';
-                    }
-                });
-                // Sincronización: color -> hex
-                inputColor.addEventListener('input', (e) => {
-                    inputText.value = e.target.value;
-                    inputText.style.borderColor = '';
-                    const colorName = id.replace('-color', '');
-                    this.colors[colorName] = e.target.value;
+            // Evento para actualizar color visual y plantilla
+            inputText.addEventListener('input', (e) => {
+                let val = e.target.value.trim();
+                if (/^#[A-Fa-f0-9]{6}$/.test(val)) {
+                    inputText.style.borderColor = '#4CAF50';
+                    colorPreview.style.background = val;
+                    this.colors[colorName] = val;
                     this.drawBackground();
-                });
-            }
+                } else {
+                    inputText.style.borderColor = 'red';
+                }
+            });
+
+            // Al hacer click en el box, abre el selector nativo
+          colorPreview.addEventListener('click', () => {
+            const tempColor = document.createElement('input');
+            tempColor.type = 'color';
+            tempColor.value = inputText.value;
+            tempColor.style.opacity = '0';
+            tempColor.style.width = '32px';
+            tempColor.style.height = '32px';
+            tempColor.style.position = 'fixed';
+            tempColor.style.left = '-10000px';
+            document.body.appendChild(tempColor);
+            tempColor.focus();
+            tempColor.click();
+
+            tempColor.addEventListener('change', (e) => {
+                inputText.value = e.target.value.toUpperCase();
+                colorPreview.style.background = e.target.value;
+                inputText.style.borderColor = '#4CAF50';
+                this.colors[colorName] = e.target.value.toUpperCase();
+                this.drawBackground();
+                setTimeout(() => {
+                    document.body.removeChild(tempColor);
+                }, 300);
+            });
+        });
+
+            colorBox.appendChild(colorPreview);
+            colorBox.appendChild(inputText);
+
+            // Wrapper
+            const wrapper = document.createElement('div');
+            wrapper.className = 'color-control';
+            wrapper.style.marginBottom = '16px';
+
+            wrapper.appendChild(mainLabel);
+            wrapper.appendChild(colorBox);
+
+            if (panel) panel.appendChild(wrapper);
         });
 
         // Download buttons

@@ -801,6 +801,17 @@ body {
     border-color: var(--primary-color);
 }
 
+.color-control input[type="text"] {
+    border-radius: 6px;
+    border: 1.5px solid #ccc;
+    padding: 6px 10px;
+    font-size: 1em;
+    background: #f9f9f9;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
 .canvas-preview {
     text-align: center;
 }
