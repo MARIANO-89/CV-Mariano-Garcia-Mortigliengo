@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariano García Mortigliengo - BI Developer & Data Analyst</title>
+    <meta name="description" content="Portfolio profesional de Mariano García Mortigliengo, especialista en Business Intelligence, Power BI y análisis de datos">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="favicon.svg" alt="BI Icon" class="nav-icon">
+                    <span class="nav-title" data-es="Mariano García" data-en="Mariano García">Mariano García</span>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#inicio" class="nav-link" data-es="Inicio" data-en="Home">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#analizador-colores" class="nav-link" data-es="Analizador de Colores" data-en="Color Analyzer">Analizador de Colores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#disenador-fondos" class="nav-link" data-es="Diseñador de Fondos" data-en="Background Designer">Diseñador de Fondos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://linkedin.com/in/marianogarciam" target="_blank" class="nav-link linkedin-link">
+                                <svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-controls">
+                    <div class="language-toggle">
+                        <button class="lang-btn active" data-lang="es">ES</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <div class="nav-toggle" id="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-profile">
+                        <img src="images/mariano-photo.jpg" alt="Mariano García Mortigliengo" class="hero-image">
+                        <div class="hero-text">
+                            <h1 class="hero-name">Mariano García Mortigliengo</h1>
+                            <h2 class="hero-title" data-es="Business Intelligence Developer" data-en="Business Intelligence Developer">Business Intelligence Developer</h2>
+                            <p class="hero-location" data-es="Santander, Cantabria • España" data-en="Santander, Cantabria • Spain">Santander, Cantabria • España</p>
+                            <div class="hero-contact">
+                                <a href="mailto:nano_carp@hotmail.com" class="contact-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                    nano_carp@hotmail.com
+                                </a>
+                                <a href="tel:+34675688410" class="contact-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                    +34 675 688 410
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Summary -->
+        <section class="section summary">
+            <div class="container">
+                <div class="card">
+                    <h3 class="section-title" data-es="Resumen Profesional" data-en="Professional Summary">Resumen Profesional</h3>
+                    <div class="expert-badge">
+                        <h4 class="expert-title" 
+                            data-es='<img src="images/microsoft-associate-badge-900.png" alt="Microsoft Associate Badge" style="height: 1.5em; vertical-align: middle; margin-right: 8px;">Experto BI especializado en Power BI y Microsoft Fabric' 
+                            data-en='<img src="images/microsoft-associate-badge-900.png" alt="Microsoft Associate Badge" style="height: 1.5em; vertical-align: middle; margin-right: 8px;">BI Expert specialized in Power BI and Microsoft Fabric'>
+                            <img src="images/microsoft-associate-badge-900.png" alt="Microsoft Associate Badge" style="height: 1.5em; vertical-align: middle; margin-right: 8px;">
+                            Experto BI especializado en Power BI y Microsoft Fabric
+                        </h4>
+                    </div>
+                    <p class="summary-text" data-es="Business Intelligence Developer con más de 4 años de experiencia especializado en Power BI, Microsoft Fabric y análisis de datos empresariales. Experto en transformación de datos complejos en insights accionables que impulsan la toma de decisiones estratégicas. Certificado como Power BI Data Analyst (PL-300) y Microsoft Fabric Analytics Engineer (DP-600) con amplia experiencia en virtualización de datos con Denodo y sistemas ERP como Odoo." data-en="Business Intelligence Developer with over 4 years of experience specialized in Power BI, Microsoft Fabric and enterprise data analysis. Expert in transforming complex data into actionable insights that drive strategic decision-making. Certified Power BI Data Analyst (PL-300) and Microsoft Fabric Analytics Engineer (DP-600) with extensive experience in data virtualization with Denodo and ERP systems like Odoo.">
+                        Business Intelligence Developer con más de 4 años de experiencia especializado en Power BI, Microsoft Fabric y análisis de datos empresariales. Experto en transformación de datos complejos en insights accionables que impulsan la toma de decisiones estratégicas. Certificado como Power BI Data Analyst (PL-300) y Microsoft Fabric Analytics Engineer (DP-600) con amplia experiencia en virtualización de datos con Denodo y sistemas ERP como Odoo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section experience">
+            <div class="container">
+                <h3 class="section-title" data-es="Experiencia Profesional" data-en="Professional Experience">Experiencia Profesional</h3>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="card timeline-content">
+                            <div class="job-header">
+                                <h4 class="job-title" data-es="Business Intelligence Developer" data-en="Business Intelligence Developer">Business Intelligence Developer</h4>
+                                <p class="job-company">Datua SA</p>
+                                <span class="job-period">2022 - <span data-es="Actualidad" data-en="Present">Actualidad</span></span>
+                            </div>
+                            <ul class="job-description" data-es="
+                                <li>Desarrollo y mantenimiento de dashboards interactivos en Power BI para análisis empresarial</li>
+                                <li>Creación de modelos de datos complejos y optimización de consultas DAX</li>
+                                <li>Integración de múltiples fuentes de datos para reporting ejecutivo</li>
+                                <li>Automatización de procesos ETL y mejora de la calidad de datos</li>
+                                <li>Colaboración con equipos multifuncionales para identificar KPIs críticos</li>
+                            " data-en="
+                                <li>Development and maintenance of interactive Power BI dashboards for business analysis</li>
+                                <li>Creation of complex data models and DAX query optimization</li>
+                                <li>Integration of multiple data sources for executive reporting</li>
+                                <li>ETL process automation and data quality improvement</li>
+                                <li>Collaboration with cross-functional teams to identify critical KPIs</li>
+                            ">
+                                <li>Desarrollo y mantenimiento de dashboards interactivos en Power BI para análisis empresarial</li>
+                                <li>Creación de modelos de datos complejos y optimización de consultas DAX</li>
+                                <li>Integración de múltiples fuentes de datos para reporting ejecutivo</li>
+                                <li>Automatización de procesos ETL y mejora de la calidad de datos</li>
+                                <li>Colaboración con equipos multifuncionales para identificar KPIs críticos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="card timeline-content">
+                            <div class="job-header">
+                                <h4 class="job-title" data-es="Especialista en Reporting Financiero" data-en="Financial Reporting Specialist">Especialista en Reporting Financiero</h4>
+                                <p class="job-company">Decathlon SA</p>
+                                <span class="job-period">2020 - 2022</span>
+                            </div>
+                            <ul class="job-description" data-es="
+                                <li>Desarrollo de reportes financieros automatizados usando Looker Studio y Excel</li>
+                                <li>Gestión y análisis de datos desde JD Edwards (Oracle) y QlikView</li>
+                                <li>Creación de dashboards para seguimiento de KPIs financieros</li>
+                                <li>Optimización de procesos de reporting reduciendo tiempo en 40%</li>
+                                <li>Colaboración con equipos financieros para análisis de rentabilidad</li>
+                            " data-en="
+                                <li>Development of automated financial reports using Looker Studio and Excel</li>
+                                <li>Data management and analysis from JD Edwards (Oracle) and QlikView</li>
+                                <li>Dashboard creation for financial KPI tracking</li>
+                                <li>Reporting process optimization reducing time by 40%</li>
+                                <li>Collaboration with finance teams for profitability analysis</li>
+                            ">
+                                <li>Desarrollo de reportes financieros automatizados usando Looker Studio y Excel</li>
+                                <li>Gestión y análisis de datos desde JD Edwards (Oracle) y QlikView</li>
+                                <li>Creación de dashboards para seguimiento de KPIs financieros</li>
+                                <li>Optimización de procesos de reporting reduciendo tiempo en 40%</li>
+                                <li>Colaboración con equipos financieros para análisis de rentabilidad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section class="section education">
+            <div class="container">
+                <div class="two-column">
+                    <div class="column">
+                        <div class="card">
+                            <h3 class="section-title" data-es="Educación" data-en="Education">Educación</h3>
+                            <div class="education-item">
+                                <h4 data-es="Grado en Administración y Dirección de Empresas" data-en="Bachelor's Degree in Business Administration">Grado en Administración y Dirección de Empresas</h4>
+                                <p class="education-specialization" data-es="Especialización en Finanzas" data-en="Specialization in Finance">Especialización en Finanzas</p>
+                            </div>
+                            <div class="education-item">
+                                <h4 data-es="FP II Comercio Internacional" data-en="Vocational Training in International Commerce">FP II Comercio Internacional</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <div class="card">
+                            <h3 class="section-title" data-es="Certificaciones" data-en="Certifications">Certificaciones</h3>
+                            <div class="certification-item featured">
+                                <span class="featured-badge-img">
+                                    <img src="images/microsoft-associate-badge-900.png" alt="Microsoft Associate Badge">
+                                </span>
+                                <h4>Fabric Analytics Engineer Associate</h4>
+                                <p class="certification-code">Microsoft DP-600</p>
+                                <a class="certification-badge" href="https://learn.microsoft.com/api/credentials/share/es-es/marianogarcia-9319/96F82429ABAA8D59?sharingId=CF293C680E372AA7" target="_blank" rel="noopener">
+                                    Microsoft Certified
+                                </a>
+                            </div>
+                            <div class="certification-item">
+                                <h4>Power BI Data Analyst</h4>
+                                <p class="certification-code">Microsoft PL-300</p>
+                                <a class="certification-badge" href="https://learn.microsoft.com/api/credentials/share/es-es/marianogarcia-9319/DE805DB0B8A8EEEF?sharingId=CF293C680E372AA7" target="_blank" rel="noopener">
+                                    Microsoft Certified
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills">
+            <div class="container">
+                <div class="card">
+                    <h3 class="section-title" data-es="Habilidades Técnicas" data-en="Technical Skills">Habilidades Técnicas</h3>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4 class="skill-category-title" data-es="Business Intelligence" data-en="Business Intelligence">Business Intelligence</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag expert">Power BI</span>
+                                <span class="skill-tag expert">Microsoft Fabric</span>
+                                <span class="skill-tag expert">DAX</span>
+                                <span class="skill-tag advanced">Looker Studio</span>
+                                <span class="skill-tag advanced">Tableau</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4 class="skill-category-title" data-es="Herramientas de Análisis" data-en="Analysis Tools">Herramientas de Análisis</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag expert">SQL</span>
+                                <span class="skill-tag expert">SSAS</span>
+                                <span class="skill-tag expert">Excel</span>
+                                <span class="skill-tag advanced">SSIS</span>
+                                <span class="skill-tag advanced">Google Sheets</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4 class="skill-category-title" data-es="Otras herramientas" data-en="Other tools">Otras herramientas</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag expert">Denodo</span>
+                                <span class="skill-tag advanced">Odoo</span>
+                                <span class="skill-tag advanced">Figma</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4 class="skill-category-title" data-es="Idiomas" data-en="Languages">Idiomas</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag expert" data-es="Español (Nativo)" data-en="Spanish (Native)">Español (Nativo)</span>
+                                <span class="skill-tag advanced" data-es="Inglés (B2)" data-en="English (B2)">Inglés (B2)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects">
+            <div class="container">
+                <div class="card">
+                    <h3 class="section-title" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h3>
+                    
+                    <div class="projects-grid">
+                        <div class="project-card priority">
+                            <div class="project-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div class="project-content">
+                                <h4 class="project-title" data-es="Virtualización de Datos con Denodo y Power BI" data-en="Data Virtualization with Denodo and Power BI">Virtualización de Datos con Denodo y Power BI</h4>
+                                <p class="project-description" data-es="Proyecto de unificación de distintos orígenes de datos provenientes de varios ERP (SAP, Expertis, Vector, Odoo, entre otros). Implementación de capa de virtualización de datos para crear una vista unificada y coherente de información empresarial distribuida en múltiples sistemas." data-en="Project for unifying different data sources from various ERPs (SAP, Expertis, Vector, Odoo, among others). Implementation of data virtualization layer to create a unified and coherent view of enterprise information distributed across multiple systems.">
+                                    Proyecto de unificación de distintos orígenes de datos provenientes de varios ERP (SAP, Expertis, Vector, Odoo, entre otros). Implementación de capa de virtualización de datos para crear una vista unificada y coherente de información empresarial distribuida en múltiples sistemas.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">Denodo</span>
+                                    <span class="tag">Power BI</span>
+                                    <span class="tag">SQL Server</span>
+                                    <span class="tag">Data Integration</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card">
+                            <div class="project-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v4h8V3h-8z"/>
+                                </svg>
+                            </div>
+                            <div class="project-content">
+                                <h4 class="project-title" data-es="Informes Empresa Pública de Vivienda" data-en="Public Housing Company Reports">Informes Empresa Pública de Vivienda</h4>
+                                <p class="project-description" data-es="Desarrollo de cuadros de mando en función a cada área dentro de la organización. Creación de informes de suscripción para diferentes departamentos incluyendo análisis económico financiero, jurídico, RRHH, servicios, entre otros. Sistema integral de reporting automatizado." data-en="Development of dashboards based on each area within the organization. Creation of subscription reports for different departments including financial economic analysis, legal, HR, services, among others. Comprehensive automated reporting system.">
+                                    Desarrollo de cuadros de mando en función a cada área dentro de la organización. Creación de informes de suscripción para diferentes departamentos incluyendo análisis económico financiero, jurídico, RRHH, servicios, entre otros. Sistema integral de reporting automatizado.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">Power BI</span>
+                                    <span class="tag">DAX</span>
+                                    <span class="tag">SQL Server</span>
+                                    <span class="tag">SSAS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Analyzer Tool -->
+        <section class="section tool-section" id="analizador-colores">
+            <div class="container">
+                <div class="card">
+                    <h3 class="section-title" data-es="🎨 Analizador de Colores y Fuentes" data-en="🎨 Color and Font Analyzer">🎨 Analizador de Colores y Fuentes</h3>
+                    <p class="tool-description" data-es="Herramienta para extraer paletas de colores y detectar fuentes de imágenes. Genera archivos descargables con los resultados del análisis." data-en="Tool to extract color palettes and detect fonts from images. Generates downloadable files with analysis results.">
+                        Herramienta para extraer paletas de colores y detectar fuentes de imágenes. Genera archivos descargables con los resultados del análisis.
+                    </p>
+                    
+                    <div class="tool-interface">
+                        <div class="upload-section">
+                            <div class="file-upload" id="color-file-upload">
+                                <div class="upload-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                                    </svg>
+                                </div>
+                                <p data-es="Arrastra una imagen aquí o haz clic para seleccionar" data-en="Drag an image here or click to select">Arrastra una imagen aquí o haz clic para seleccionar</p>
+                                <input type="file" id="color-file-input" accept="image/*" hidden>
+                                <button class="upload-btn" onclick="document.getElementById('color-file-input').click()" data-es="Seleccionar Archivo" data-en="Select File">Seleccionar Archivo</button>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-results" id="color-results" style="display: none;">
+                            <div class="results-header">
+                                <h4 data-es="Resultados del Análisis" data-en="Analysis Results">Resultados del Análisis</h4>
+                                <div class="loading-spinner" id="color-loading" style="display: none;">
+                                    <div class="spinner"></div>
+                                    <span data-es="Analizando..." data-en="Analyzing...">Analizando...</span>
+                                </div>
+                            </div>
+                            
+                            <div class="color-palette" id="color-palette">
+                                <h5 data-es="Paleta de Colores" data-en="Color Palette">Paleta de Colores</h5>
+                                <div class="palette-colors" id="palette-colors"></div>
+                            </div>
+                            
+                            <div class="download-actions">
+                                <button class="download-btn" id="download-txt" data-es="Descargar .txt" data-en="Download .txt">Descargar .txt</button>
+                                <button class="download-btn secondary" id="download-powerbi-theme" data-es="Descargar Tema Power BI (.json)" data-en="Download Power BI Theme (.json)">Descargar Tema Power BI (.json)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Background Designer Tool -->
+        <section class="section tool-section" id="disenador-fondos">
+            <div class="container">
+                <div class="card">
+                    <h3 class="section-title" data-es="🎨 Diseñador de Fondos Power BI" data-en="🎨 Power BI Background Designer">🎨 Diseñador de Fondos Power BI</h3>
+                    <p class="tool-description" data-es="Crea fondos profesionales para dashboards de Power BI con plantillas predefinidas y personalización de colores." data-en="Create professional backgrounds for Power BI dashboards with predefined templates and color customization.">
+                        Crea fondos profesionales para dashboards de Power BI con plantillas predefinidas y personalización de colores.
+                    </p>
+                    
+                    <div class="tool-interface">
+                        <div class="template-selection">
+                            <h4 data-es="Seleccionar Plantilla" data-en="Select Template">Seleccionar Plantilla</h4>
+                            <div class="template-grid">
+                                <div class="template-card active" data-template="dashboard">
+                                    <div class="template-preview template-dashboard"></div>
+                                    <span data-es="Dashboard Moderno" data-en="Modern Dashboard">Dashboard Moderno</span>
+                                </div>
+                                <div class="template-card" data-template="analytics">
+                                    <div class="template-preview template-analytics"></div>
+                                    <span data-es="Analytics Pro" data-en="Analytics Pro">Analytics Pro</span>
+                                </div>
+                                <div class="template-card" data-template="executive">
+                                    <div class="template-preview template-executive"></div>
+                                    <span data-es="Ejecutivo Premium" data-en="Executive Premium">Ejecutivo Premium</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="customization-panel">
+                            <h4 data-es="Personalizar Colores" data-en="Customize Colors">Personalizar Colores</h4>
+                            <div class="color-controls">
+                                <div class="color-control">
+                                    <label data-es="Color Primario" data-en="Primary Color">Color Primario</label>
+                                    <input type="color" id="primary-color" value="#005A9F">
+                                </div>
+                                <div class="color-control">
+                                    <label data-es="Color Secundario" data-en="Secondary Color">Color Secundario</label>
+                                    <input type="color" id="secondary-color" value="#E8F4FD">
+                                </div>
+                                <div class="color-control">
+                                    <label data-es="Color de Acento" data-en="Accent Color">Color de Acento</label>
+                                    <input type="color" id="accent-color" value="#F2C811">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="canvas-preview">
+                            <h4 data-es="Vista Previa" data-en="Preview">Vista Previa</h4>
+                            <canvas id="background-canvas" width="1280" height="720"></canvas>
+                            
+                            <div class="download-actions">
+                                <button class="download-btn" id="download-png" data-es="Descargar PNG" data-en="Download PNG">Descargar PNG</button>
+                                <button class="download-btn secondary" id="download-jpg" data-es="Descargar JPG" data-en="Download JPG">Descargar JPG</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact">
+            <div class="container">
+                <div class="card">
+                    <h3 class="section-title" data-es="Información de Contacto" data-en="Contact Information">Información de Contacto</h3>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-content">
+                                <h4>Email</h4>
+                                <a href="mailto:nano_carp@hotmail.com">nano_carp@hotmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-content">
+                                <h4 data-es="Teléfono" data-en="Phone">Teléfono</h4>
+                                <a href="tel:+34675688410">+34 675 688 410</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-content">
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/marianogarciam" target="_blank">marianogarciam</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-content">
+                                <h4 data-es="Ubicación" data-en="Location">Ubicación</h4>
+                                <p data-es="Santander, Cantabria" data-en="Santander, Cantabria">Santander, Cantabria</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mariano García Mortigliengo. <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

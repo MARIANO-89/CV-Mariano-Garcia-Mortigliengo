@@ -1,0 +1,20 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "Solicitar información del CV del usuario",
+        "details": "Recopilar información personal, experiencia laboral, educación, habilidades y preferencias de diseño para la página del CV",
+        "status": "completed",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "Desarrollo de la aplicación web full-stack",
+        "details": "Crear una aplicación web moderna con:\n- 📊 Página CV estilo Dashboard Power BI: Diseño moderno con colores claros, cambio de idioma (español/inglés), totalmente editable desde admin\n- 🎨 Analizador de Colores y Fuentes: Extraer paletas hexadecimales y fuentes de URLs/imágenes/PDFs + generar JSON de tema para Power BI\n- 🖼️ Diseñador de Fondos Power BI: 3 diseños predefinidos personalizables, modificar colores, descargar PNG/JPG\n- Funcionalidad para procesar URLs, imágenes y PDFs\n- Herramientas de diseño para crear fondos personalizados\n- Sistema de descarga: archivos TXT, JSON de temas Power BI, fondos PNG/JPG\n- 📱 DISEÑO RESPONSIVE: Totalmente adaptable a todos los dispositivos\n- 🔧 PANEL DE ADMINISTRACIÓN: Backend completo para modificar contenido, imágenes, traducciones\n- Sistema de autenticación para admin\n- Gestor de imágenes y archivos\n- Editor de contenido dinámico bilingüe\n- Interfaz moderna estilo Power BI\n- Backend robusto con base de datos y almacenamiento",
+        "status": "in_progress",
+        "priority": "high"
+      }
+    }
+  }
+}
